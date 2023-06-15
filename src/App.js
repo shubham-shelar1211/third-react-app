@@ -1,36 +1,23 @@
-import { useState } from "react";
-
 function App() {
   return (
     <>
-      <h1>String Exampl</h1>
-      <StringDemo />
+      <h1>Counter App</h1>
+      <CounterApp />
     </>
   );
 }
 
-function StringDemo() {
-  let [title, setTitle] = useState("Hello World");
-
-  let lowerCaseAction = () => {
-    title = title.toLowerCase();
-    console.log(title);
-
-    setTitle(title);
-  };
-
-  let upperCaseAction = () => {
-    title = title.toUpperCase();
-    console.log(title);
-
-    setTitle(title);
+// UserDefineTag
+function CounterApp() {
+  // Member Function
+  let likeMeAction = () => {
+    // alert();
+    console.log("I m button click");
   };
 
   return (
     <>
-      <h1>{title}</h1>
-      <input type="button" value="Lower Case" onClick={lowerCaseAction} />
-      <input type="button" value="Upper Case" onClick={upperCaseAction} />
+      <input type="button" value="Like Me" onClick={likeMeAction} />
     </>
   );
 }
